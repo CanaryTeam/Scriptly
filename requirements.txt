@@ -1,0 +1,5 @@
+requests
+discord.py
+python-dotenv
+google-generativeai
+motor
