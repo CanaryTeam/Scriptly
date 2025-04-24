@@ -5,7 +5,7 @@
 [![MongoDB](https://img.shields.io/badge/Database-MongoDB-47A248?logo=mongodb&logoColor=white)](https://www.mongodb.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![Scriptly Banner](assets\banner.png)
+![Scriptly Banner](assets/banner.png)
 
 **Scriptly** is an intelligent Discord assistant powered by the **Google Gemini API**. It provides AI-driven responses within your server, featuring a modular command structure (`discord.py` Cogs), server-specific configurations stored in MongoDB, and a custom logging system for straightforward monitoring.
 
@@ -81,7 +81,7 @@
 
 ## Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/<your-github-username>/scriptly/issues) (if you plan to use GitHub Issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/CanaryTeam/Scriptly/issues) (if you plan to use GitHub Issues).
 
 ---
 
