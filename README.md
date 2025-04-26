@@ -59,6 +59,9 @@
     ```bash
     python main.py
     ```
+    
+5.  **Instructions**
+    You can also edit the instructions file to your liking.
 
 ---
 
