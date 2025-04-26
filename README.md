@@ -84,7 +84,7 @@
 
 ## Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/CanaryTeam/Scriptly/issues) (if you plan to use GitHub Issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/CanaryTeam/Scriptly/issues)
 
 ---
 
