@@ -32,7 +32,6 @@ def setup_logging():
     except Exception as e:
         print(f"Error setting up file logging handler: {e}", file=sys.stderr)
 
-
     console_handler = logging.StreamHandler(sys.stdout)
     console_handler.setFormatter(log_format)
     root_logger.addHandler(console_handler)
@@ -46,8 +45,6 @@ def setup_logging():
 
 
 ASCII_ART = r"""
-
-
  ________  ________  ________   ________  ________      ___    ___ 
 |\   ____\|\   __  \|\   ___  \|\   __  \|\   __  \    |\  \  /  /|
 \ \  \___|\ \  \|\  \ \  \\ \  \ \  \|\  \ \  \|\  \   \ \  \/  / /
@@ -56,13 +53,12 @@ ASCII_ART = r"""
    \ \_______\ \__\ \__\ \__\\ \__\ \__\ \__\ \__\\ _\ __/  / /    
     \|_______|\|__|\|__|\|__| \|__|\|__|\|__|\|__|\|__|\___/ /     
                                                       \|___|/      
-
 Developed by Canary Software
 ----------------------------------
 """
 
 intents = discord.Intents.default()
-intents.message_content = True # 
+intents.message_content = True  
 intents.guilds = True    
 
 class ScriptlyBot(commands.Bot):
@@ -101,7 +97,6 @@ class ScriptlyBot(commands.Bot):
         try:
             synced = await self.tree.sync()
             self.logger.info(f"Synced {len(synced)} application command(s) globally.")
-   
         except Exception as e:
             self.logger.exception("Error syncing application commands.")
 
@@ -125,7 +120,6 @@ class ScriptlyBot(commands.Bot):
             return
 
         is_guild = message.guild is not None
-
         is_mentioned = self.user in message.mentions
 
         if message.content.startswith(self.command_prefix):
@@ -159,7 +153,6 @@ class ScriptlyBot(commands.Bot):
         bot_mention_pattern_no_nick = f'<@{self.user.id}>' 
         user_message = user_message.replace(bot_mention_pattern_nick, '').replace(bot_mention_pattern_no_nick, '').strip()
 
-
         if not user_message:
             self.logger.info("Ignoring empty message after removing bot mention.")
 
@@ -170,7 +163,6 @@ class ScriptlyBot(commands.Bot):
             except Exception as e:
                 self.logger.error(f"Exception during get_ai_response call: {e}")
                 ai_response = f"Sorry, there was an internal error contacting the AI service ({type(e).__name__})."
-
 
         response_content = f"{ai_response}\n\n-# Scriptly can make mistakes, don't rely on it."
 
@@ -212,7 +204,6 @@ class ScriptlyBot(commands.Bot):
                  self.logger.error(log_message, exc_info=error)
         else:
             self.logger.error(log_message, exc_info=error)
-
 
         reply = None
         delete_after = 15 
@@ -267,7 +258,6 @@ class ScriptlyBot(commands.Bot):
 if __name__ == "__main__":
     setup_logging()
 
-
     print(ASCII_ART)
 
     dotenv_path = '.env'
@@ -293,7 +283,6 @@ if __name__ == "__main__":
 
     bot = ScriptlyBot()
     try:
-
         bot.run(
             DISCORD_TOKEN,
             reconnect=True,
